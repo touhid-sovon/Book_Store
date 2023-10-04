@@ -1,0 +1,13 @@
+{% extends '_base.html' %}
+
+{% block title %}Seacrh Results{% endblock title %}
+
+{% block content %}
+    {% for book in books %}
+
+    <h4><a href="{{ book.get_absolute_url }}">{{book.title}}</a></h4>
+    <p><b>Author:</b>{{book.author}}</p>
+    <p><b>Price:</b>{{book.price}}</p>
+    
+    {% endfor %}
+{% endblock content %}
